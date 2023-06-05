@@ -1,0 +1,31 @@
+@use "./breakpoints" as b;
+
+@mixin xs-device {
+    @media only screen and (max-width: (b.$sm - 1px)) {
+        @content;
+    }
+}
+
+@mixin small-device {
+    @media only screen and (min-width: b.$sm) and (max-width: (b.$md - 1px)) {
+        @content;
+    }
+}
+
+@mixin medium-device {
+    @media only screen and (min-width: b.$md) and (max-width: (b.$lg - 1px)) {
+        @content;
+    }
+}
+
+@mixin large-device {
+    @media only screen and (min-width: b.$lg) and (max-width: (b.$xl - 1px)) {
+        @content;
+    }
+}
+
+@mixin xl-device {
+    @media only screen and (min-width: b.$xl) {
+        @content;
+    }
+}
