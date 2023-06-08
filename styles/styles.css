@@ -134,7 +134,13 @@ body {
 }
 
 .footer {
-  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.footer__link {
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

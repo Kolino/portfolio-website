@@ -121,7 +121,10 @@ body {
 
 
 .footer {
-    height: 10vh;
+    @include m.flex();
+    &__link {
+        color: white;
+    }
 }
 
 
