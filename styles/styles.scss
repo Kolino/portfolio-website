@@ -2,72 +2,64 @@
 
 * {
     margin: 0;
-    // Matthew James Taylor's responsive padding
     padding: calc(8px + 1.5625vw);
     font-family: 'Courier New', Courier, monospace;
-    // Matthew James Taylor's responsive font size
     font-size: calc(15px + 0.390625vw);
 }
 
 html {
     padding: 0;
-    background-image: url(./background.png);
 }
 
 body {
     padding: 0;
+    background-color: #ffb703;
+    color: #023047;
 }
 
 .nav {
-    &--main {
-        height: 5vh;
-        position: sticky;
-        top: 0;
-        padding: 0;
-        &__ul {
-            height: 100%;
-            @include m.flex(row, space-around, center);
-            list-style-type: none;
-            // background-color: #90e0ef;
-            &__li {
-                &__link {
-                    text-decoration: none;
-                    color: black;
-                }
+    height: 0;
+    position: sticky;
+    top: 0;
+    padding: 0;
+    &__ul {
+        @include m.flex(row, space-around, center);
+        list-style-type: none;
+        &__li {
+            &__link {
+                text-decoration: none;
+                color: #023047;
+                padding: 0;
             }
-        }
-    }
-}
-
-.header {
-    height: 100vh;
-    @include m.flex(column);
-    &__main-heading {
-        font-size: calc(40px + 0.390625vw);
-        padding-right: 20vw;
-        @include m.xs-device {
-            padding: calc(8px + 1.5625vw);
-        }
-    }
-    &__subheading {
-        font-size: calc(20px + 0.390625vw);
-        padding-left: 20vw;
-        font-style: italic;
-        @include m.xs-device {
-            padding: calc(8px + 1.5625vw);
         }
     }
 }
 
 .section {
     height: 100vh;
+    padding: 0;
     @include m.flex(column, center, center);
     &__heading {
         font-size: calc(35px + 0.390625vw);
     }
-    &__text {
-        text-align: center;
+}
+
+.home-section {
+    &__header {
+        &__main-heading {
+            font-size: calc(40px + 0.390625vw);
+            text-align: center;
+        }
+        &__subheading {
+            font-size: calc(20px + 0.390625vw);
+            text-align: center;
+            font-style: italic;
+        }
     }
+}
+
+main {
+    padding: 0;
 }
 
 .about-section {
@@ -75,6 +67,9 @@ body {
         @include m.flex();
         @include m.xs-device {
             @include m.flex(column);
+        }
+        &__text {
+            text-align: center;
         }
     }
     &__img {
