@@ -13,8 +13,9 @@ html {
 
 body {
     padding: 0;
-    background-color: #ffb703;
-    color: #023047;
+    background-color: #118ab2;
+    color: white;
+    font-weight: 900;
 }
 
 .nav {
@@ -25,10 +26,11 @@ body {
     &__ul {
         @include m.flex(row, space-around, center);
         list-style-type: none;
+        padding: 0;
         &__li {
             &__link {
                 text-decoration: none;
-                color: #023047;
+                color: white;
                 padding: 0;
             }
         }
@@ -74,6 +76,13 @@ main {
     }
     &__img {
         border-radius: 50%;
+    }
+}
+
+.tech-skills-section {
+    &__list {
+        @include m.flex(row, space-around, center);
+        flex-wrap: wrap;
     }
 }
 
