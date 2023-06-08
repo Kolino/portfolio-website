@@ -16,6 +16,7 @@ body {
     background-color: #118ab2;
     color: white;
     font-weight: 900;
+    @include m.flex(column, center, center);
 }
 
 .nav {
@@ -38,7 +39,6 @@ body {
 }
 
 .section {
-    height: 100vh;
     padding: 0;
     @include m.flex(column, center, center);
     &__heading {
@@ -47,6 +47,7 @@ body {
 }
 
 .home-section {
+    height: 100vh;
     &__header {
         &__main-heading {
             font-size: calc(40px + 0.390625vw);
@@ -60,11 +61,14 @@ body {
     }
 }
 
-main {
-    padding: 0;
-}
+// main {
+//     padding: 0;
+//     display: flex;
+//     @include m.flex(column, center, center);
+// }
 
 .about-section {
+    height: 100vh;
     &__div {
         @include m.flex();
         @include m.xs-device {
@@ -80,9 +84,37 @@ main {
 }
 
 .tech-skills-section {
+    height: 100vh;
     &__list {
         @include m.flex(row, space-around, center);
         flex-wrap: wrap;
+    }
+}
+
+.projects-section {
+    &__list {
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        @include m.flex(column, space-between, center);
+        &__item {
+            width: 100%;
+            @include m.flex(row, space-around, center);
+            &--reverse {
+                @include m.flex(row-reverse, space-around, center);
+            }
+            &__img {
+                padding: 0;
+                width: 20%;
+                height: auto;
+            }
+            &__text {
+                text-align: center;
+                &__link {
+                    color: white;
+                }
+            }
+        }
     }
 }
 
