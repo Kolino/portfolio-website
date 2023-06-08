@@ -11,8 +11,9 @@ html {
 
 body {
   padding: 0;
-  background-color: #ffb703;
-  color: #023047;
+  background-color: #118ab2;
+  color: white;
+  font-weight: 900;
 }
 
 .nav {
@@ -27,10 +28,11 @@ body {
   justify-content: space-around;
   align-items: center;
   list-style-type: none;
+  padding: 0;
 }
 .nav__ul__li__link {
   text-decoration: none;
-  color: #023047;
+  color: white;
   padding: 0;
 }
 
@@ -79,6 +81,14 @@ main {
 }
 .about-section__img {
   border-radius: 50%;
+}
+
+.tech-skills-section__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer {
