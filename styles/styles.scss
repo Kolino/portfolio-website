@@ -2,129 +2,263 @@
 
 * {
     margin: 0;
-    padding: calc(8px + 1.5625vw);
+    padding: 0;
     font-family: 'Courier New', Courier, monospace;
-    font-size: calc(15px + 0.390625vw);
+    color: white;
 }
 
 html {
-    padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
-    padding: 0;
-    background-color: #118ab2;
-    color: white;
-    font-weight: 900;
+    font-size: 62.5%;
+    font-weight: bold;
+    background-color: #06d6a0;
     @include m.flex(column, center, center);
 }
 
-.nav {
-    height: 0;
+.link {
+    text-decoration: none;
+    font-size: 2rem;
+    &:hover {
+        font-size: 3rem;
+    }
+}
+
+.nav-header {
     position: sticky;
     top: 0;
-    padding: 0;
-    &__ul {
-        @include m.flex(row, space-around, center);
-        list-style-type: none;
-        padding: 0;
-        &__li {
-            &__link {
-                text-decoration: none;
-                color: white;
-                padding: 0;
+    width: 100%;
+    padding: 1rem;
+    @include m.xs-device {
+        padding: 0.75rem;
+    }
+    @include m.small-device {
+        padding: 0.75rem;
+    }
+    @include m.medium-device {
+        padding: 1rem;
+    }
+    &__nav {
+        @include m.flex(row, space-around);
+        &__link {
+            font-size: 1.5rem;
+            @include m.xs-device {
+                font-size: 1rem;
+            }
+            @include m.small-device {
+                font-size: 1rem;
+            }
+            @include m.medium-device {
+                font-size: 1.5rem;
             }
         }
     }
 }
 
-.section {
-    padding: 0;
+.down-link {
+    font-size: 3rem;
+    &:hover {
+        font-size: 6rem;
+    }
+    @include m.xs-device {
+        font-size: 1.2rem;
+        &:hover {
+            font-size: 2.4rem;
+        }
+    }
+    @include m.small-device {
+        font-size: 1.2rem;
+        &:hover {
+            font-size: 2.4rem;
+        }
+    }
+    @include m.medium-device {
+        font-size: 1.8rem;
+        &:hover {
+            font-size: 3.6rem;
+        }
+    }
+}
+
+.page-section {
+    min-height: 100vh;
+    width: 100%;
     @include m.flex(column, center, center);
+    &--blue {
+        background-color: #118ab2;
+    }
+    &__container {
+        margin-bottom: 2rem;
+        @include m.xs-device {
+            margin-bottom: 1rem;
+        }
+        @include m.small-device {
+            margin-bottom: 1rem;
+        }
+        @include m.medium-device {
+            margin-bottom: 1.5rem;
+        }
+    }
     &__heading {
-        font-size: calc(35px + 0.390625vw);
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        @include m.xs-device {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        @include m.small-device {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        @include m.medium-device {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
     }
 }
 
 .home-section {
-    height: 100vh;
-    &__header {
-        &__main-heading {
-            font-size: calc(40px + 0.390625vw);
-            text-align: center;
+    &__main-heading {
+        font-size: 6rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        @include m.xs-device {
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
-        &__subheading {
-            font-size: calc(20px + 0.390625vw);
-            text-align: center;
-            font-style: italic;
+        @include m.small-device {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        @include m.medium-device {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+    &__subheading {
+        font-size: 3rem;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 2rem;
+        @include m.xs-device {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        @include m.small-device {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        @include m.medium-device {
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
         }
     }
 }
 
-// main {
-//     padding: 0;
-//     display: flex;
-//     @include m.flex(column, center, center);
-// }
-
 .about-section {
-    height: 100vh;
     &__div {
-        @include m.flex();
-        @include m.xs-device {
-            @include m.flex(column);
-        }
+        @include m.flex(column);
         &__text {
+            font-size: 2rem;
             text-align: center;
+            margin: 0 5rem;
+            @include m.xs-device {
+                font-size: 1rem;
+                margin: 0 3rem;
+            }
+            @include m.small-device {
+                font-size: 1rem;
+                margin: 0 3rem;
+            }
+            @include m.medium-device {
+                font-size: 1.5rem;
+                margin: 0 4rem;
+            }
         }
-    }
-    &__img {
-        border-radius: 50%;
     }
 }
 
 .tech-skills-section {
-    height: 100vh;
-    &__list {
-        @include m.flex(row, space-around, center);
+    &__grid {
+        @include m.flex(row, center, center);
         flex-wrap: wrap;
-    }
-}
-
-.projects-section {
-    &__list {
-        padding: 0;
-        height: 100%;
-        width: 100%;
-        @include m.flex(column, space-between, center);
         &__item {
-            width: 100%;
-            @include m.flex(row, space-around, center);
-            &--reverse {
-                @include m.flex(row-reverse, space-around, center);
+            margin: 4rem;
+            @include m.xs-device {
+                margin: 1.5rem;
             }
-            &__img {
-                padding: 0;
-                width: 20%;
-                height: auto;
+            @include m.small-device {
+                margin: 2rem;
             }
-            &__text {
-                text-align: center;
-                &__link {
-                    color: white;
+            @include m.medium-device {
+                margin: 3rem;
+            }
+            &__logo {
+                font-size: 6rem;
+                @include m.xs-device {
+                    font-size: 2.25rem;
+                }
+                @include m.small-device {
+                    font-size: 3rem;
+                }
+                @include m.medium-device {
+                    font-size: 4.5rem;
                 }
             }
         }
     }
 }
 
-
-
-.footer {
-    @include m.flex();
-    &__link {
-        color: white;
+.projects-section {
+    &__list {
+        @include m.flex(column, space-between, center);
+        &__item {
+            @include m.flex(row, space-around, center);
+            margin: 1rem 2rem;
+            @include m.xs-device {
+                margin: 0.5rem 1rem;
+            }
+            &--reverse {
+                @include m.flex(row-reverse, space-around, center);
+            }
+            &__img {
+                width: 25%;
+                height: auto;
+            }
+            &__text {
+                text-align: center;
+                font-size: 1.1rem;
+                @include m.xs-device {
+                    font-size: 0.7rem;
+                }
+                @include m.small-device {
+                    font-size: 0.85rem;
+                }
+                @include m.medium-device {
+                    font-size: 0.95rem;
+                }
+            }
+        }
     }
 }
 
+.contact-section {
+    &__container {
+        @include m.flex();
+        &__link {
+            padding: 0.5rem 1rem;
+            font-size: 3rem;
+            &:hover {
+                font-size: 4rem;
+            }
+        }
+    }
+}
 
+.copyright-footer {
+    &__text {
+        font-size: 0.75rem;
+    }
+}
