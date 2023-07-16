@@ -296,7 +296,8 @@ body {
 }
 .projects-section__list__item__text {
   text-align: center;
-  font-size: 1.1rem;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
 }
 @media only screen and (max-width: 599px) {
   .projects-section__list__item__text {
@@ -312,6 +313,15 @@ body {
   .projects-section__list__item__text {
     font-size: 0.95rem;
   }
+}
+.projects-section__list__item__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.projects-section__list__item__links__link {
+  margin: 0.4rem;
 }
 
 .contact-section__container {
@@ -336,7 +346,7 @@ body {
 }
 
 .copyright-footer__text {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -217,7 +217,8 @@ body {
             }
             &__text {
                 text-align: center;
-                font-size: 1.1rem;
+                margin: 0 0.5rem;
+                font-size: 1.2rem;
                 @include m.xs-device {
                     font-size: 0.7rem;
                 }
@@ -226,6 +227,12 @@ body {
                 }
                 @include m.medium-device {
                     font-size: 0.95rem;
+                }
+            }
+            &__links {
+                @include m.flex(row, space-around, center);
+                &__link {
+                    margin: 0.4rem;
                 }
             }
         }
@@ -250,6 +257,6 @@ body {
 
 .copyright-footer {
     &__text {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
     }
 }
