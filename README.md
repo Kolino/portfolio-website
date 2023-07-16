@@ -1,9 +1,6 @@
-# Keelan's Portfolio Website
-This is a portfolio website for myself that includes features such as:
-- a landing
-- an about section
-- a section detailing my tech skills
-- a section listing and describing all my projects to date
-- and a contact section with my Github/Linkedin contact details
+# Portfolio Website
 
-The portfolio is created using HTML and SASS.
+Working link: https://keelan-black.netlify.app/
+
+## Description
+This is a portfolio website created with HTML and SASS for myself that includes a landing, an about me section, a skill section, a projects section, and a footer containing my Github/Linkedin.
